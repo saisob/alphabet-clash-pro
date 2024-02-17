@@ -20,4 +20,35 @@ function getARandomAlphabet (){
     currentElement.innerText = alphabet;
     setBackgroundColorById(alphabet);
 }
+function handelKeybordButtonPress(event){
+    const playerPressed = event.key ;
+    console.log("player pressed:",playerPressed);
 
+    // get the expected to spess 
+    const currentAlphabetElement = document.getElementById('current-element');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed,expectedAlphabet);
+
+    // check match or not 
+    if(playerPressed == expectedAlphabet){
+        const currentScoreId = document.getElementById('current-score');
+        const currentScoreValue = currentScoreId.innerText;
+        const currentScore = parseInt(currentScoreValue);
+        console.log(currentScore);
+
+        const newScore = currentScore + 1;
+        currentScoreId.innerText = newScore;
+
+        removeBackgroundColorById(expectedAlphabet );
+        play();
+        getARandomAlphabet();
+        setBackgroundColorById();
+
+
+    }
+    else{
+        console.log('you lost a poient');
+    }
+}
+document.addEventListener('keyup',handelKeybordButtonPress);
