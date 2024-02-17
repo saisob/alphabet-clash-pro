@@ -5,6 +5,9 @@ function play(){
     // step-2: show the playground section 
     const playGround = document.getElementById("play-ground");
     playGround.classList.remove('hidden');
+
+    hideElementById('final-score');
+    
 }
 
 function getARandomAlphabet (){
@@ -35,9 +38,11 @@ function handelKeybordButtonPress(event){
         const currentScoreId = document.getElementById('current-score');
         const currentScoreValue = currentScoreId.innerText;
         const currentScore = parseInt(currentScoreValue);
-        console.log(currentScore);
+        // console.log(currentScore);
 
+        // incress the score by 1 
         const newScore = currentScore + 1;
+        // set the update score 
         currentScoreId.innerText = newScore;
 
         removeBackgroundColorById(expectedAlphabet );
@@ -49,6 +54,26 @@ function handelKeybordButtonPress(event){
     }
     else{
         console.log('you lost a poient');
+        // 1 : get the current element number 
+        const currentLifeId = document.getElementById("current-life");
+        const currentLifeValue = currentLifeId.innerText;
+        const currentLife = parseInt(currentLifeValue);
+        // console.log(currentLife)
+
+        // 2 : reduce the score by 1 
+        const newLife = currentLife - 1 ;
+        // 3 : set the update score
+        currentLifeId.innerText = newLife; 
+
+        if( newLife === 0){
+            gameOver();
+        }
     }
 }
 document.addEventListener('keyup',handelKeybordButtonPress);
+
+
+function gameOver (){
+    hideElementById("play-ground");
+    showElementById('final-score');
+}
