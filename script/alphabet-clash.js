@@ -16,8 +16,8 @@ function getARandomAlphabet (){
     const randomNumber = Math.random()*25;
     const indexNumber = Math.round(randomNumber);
 
-    const alphabet =alphabets[indexNumber];
-    console.log('your rendom alphabet:',alphabet) ;
+    const alphabet = alphabets[indexNumber];
+    // console.log('your rendom alphabet:',alphabet) ;
 
     const currentElement = document.getElementById('current-element');
     currentElement.innerText = alphabet;
@@ -25,13 +25,13 @@ function getARandomAlphabet (){
 }
 function handelKeybordButtonPress(event){
     const playerPressed = event.key ;
-    console.log("player pressed:",playerPressed);
+    // console.log("player pressed:",playerPressed);
 
     // get the expected to spess 
     const currentAlphabetElement = document.getElementById('current-element');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLowerCase();
-    console.log(playerPressed,expectedAlphabet);
+    // console.log(playerPressed,expectedAlphabet);
 
     // check match or not 
     if(playerPressed == expectedAlphabet){
@@ -76,4 +76,16 @@ document.addEventListener('keyup',handelKeybordButtonPress);
 function gameOver (){
     hideElementById("play-ground");
     showElementById('final-score');
+    setElementValueById("current-life", 5);
+
+    const lastScore = getTextElementValueById("current-score");
+    console.log(lastScore);
+    setElementValueById("last-score",lastScore);
+
+    setElementValueById("current-score",0);
+    
+    const exAlphabet = getElementTextById("current-element");
+    removeBackgroundColorById(exAlphabet);
+    
+
 }
