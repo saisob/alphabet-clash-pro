@@ -14,17 +14,44 @@
 <body>
     <main class=" bg-[#010313] bg-[url('/images/background.png')] bg-no-repeat  bg-center">
         <!-- Home section -->
-        <section id="home-section" class=" flex justify-center items-center min-h-screen">
-            <div class="text-center text-white space-y-5 ">
-                <h1 class=" text-6xl font-extrabold">Alphabet Clash Pro</h1>
-                <p>Unleash your keyboard kung Fu:press Enter to play </p>
-                <button onclick="play(),getARandomAlphabet(),setBackgroundColorById()" class="btn">play now</button>
+        <section id="home-section" class="pt-20 items-center min-h-screen">
+            <div class=" text-center text-white space-y-5 ">
+                <h1 class=" text-6xl font-extrabold">Alphabet Clash</h1>
+                <p>Double your typing speed. Learn keyboarding in the fun way. Test your wpm speed and <br>Play top-notch typing games. Find it all from Alphabet Clash!</p>
+                
+            </div>
+            <div class="grid grid-cols-2 mt-32">
+                <div class="text-center space-y-14">
+                    <p class="text-white text-3xl font-semibold">Do you want to play game?Press click to Play</p>
+                    <button onclick="play(),getARandomAlphabet(),setBackgroundColorById()" class="btn text-xl font-bold">play now</button>
+                </div>
+                <div class="text-center space-y-14">
+                    <p class="text-white text-3xl font-semibold">Do you want to test your typing speed?<br> Press click to Start</p>
+                    <button onclick="start()" class="btn text-xl font-bold ">Start now</button>
+                </div>
             </div>
         </section>
         <!-- Typing test section  -->
+        <section id="typingTestSection" class="bg-fuchsia-50 border-2 min-h-screen hidden">
+            <div class="text-center space-y-5 mt-24 ">
+                <h1 class="text-5xl font-bold mb-8 ">Typing speed test</h1>
+                <div>
+                    <p class=" pt-4 mx-auto mb-8  border-8 border-blue-600 rounded-full w-24 h-24 text-5xl font-semibold"
+                        hidden id="showTime"></p>
+                </div>
+                <p class=" text-2xl text-orange-900" id="showSentence"></p>
+                <div>
+                    <textarea id="textarea" class="textarea textarea-info w-[800px] h-[100px] text-2xl"
+                        disabled></textarea>
 
+                </div>
+                <button id="btn" class="btn px-16 text-xl bg-white">Start</button>
+                <p id="score" class="font-bold text-2xl text-amber-600 "></p>
+
+            </div>
+        </section>
         <!-- play section  -->
-        <section id="play-ground" class=" flex flex-col items-center gap-20 pt-20 hidden">
+        <section id="play-ground" class=" flex flex-col items-center gap-20 pt-4 hidden">
             <div>
                 <div
                     class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] bg-center">
@@ -73,7 +100,7 @@
                     <kbd id="/" class="kbd w-20">/</kbd>
                 </div>
             </div>
-            <div class="flex justify-between w-4/6">
+            <div class="flex justify-between w-4/6 pb-10">
                 <button class="btn rounded-full text-white bg-purple-700 ">
                     Life
                     <img src="images/hard.svg" alt="">
@@ -102,6 +129,7 @@
     </main>
     <script src="script/other.js"></script>
     <script src="script/alphabet-clash.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
