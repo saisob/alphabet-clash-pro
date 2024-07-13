@@ -9,6 +9,8 @@
     <!-- daisyui khala  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -17,22 +19,30 @@
         <section id="home-section" class="pt-20 items-center min-h-screen">
             <div class=" text-center text-white space-y-5 ">
                 <h1 class=" text-6xl font-extrabold">Alphabet Clash</h1>
-                <p>Double your typing speed. Learn keyboarding in the fun way. Test your wpm speed and <br>Play top-notch typing games. Find it all from Alphabet Clash!</p>
-                
+                <p>Double your typing speed. Learn keyboarding in the fun way. Test your wpm speed and <br>Play
+                    top-notch typing games. Find it all from Alphabet Clash!</p>
+
             </div>
             <div class="grid grid-cols-2 mt-32">
                 <div class="text-center space-y-14">
                     <p class="text-white text-3xl font-semibold">Do you want to play game?Press click to Play</p>
-                    <button onclick="play(),getARandomAlphabet(),setBackgroundColorById()" class="btn text-xl font-bold">play now</button>
+                    <button onclick="play(),getARandomAlphabet(),setBackgroundColorById()"
+                        class="btn text-xl font-bold">play now</button>
                 </div>
                 <div class="text-center space-y-14">
-                    <p class="text-white text-3xl font-semibold">Do you want to test your typing speed?<br> Press click to Start</p>
+                    <p class="text-white text-3xl font-semibold">Do you want to test your typing speed?<br> Press click
+                        to Start</p>
                     <button onclick="start()" class="btn text-xl font-bold ">Start now</button>
                 </div>
             </div>
         </section>
         <!-- Typing test section  -->
         <section id="typingTestSection" class="bg-fuchsia-50 border-2 min-h-screen hidden">
+            <div class="ml-5 mt-5">
+                <a href="index.html">
+                    <i class="fa-solid text-4xl text-blue-800 fa-circle-arrow-left"></i>
+                </a>
+            </div>
             <div class="text-center space-y-5 mt-24 ">
                 <h1 class="text-5xl font-bold mb-8 ">Typing speed test</h1>
                 <div>
@@ -52,7 +62,13 @@
         </section>
         <!-- play section  -->
         <section id="play-ground" class=" flex flex-col items-center gap-20 pt-4 hidden">
-            <div>
+         
+            <div class="flex">
+                <div class="absolute -ml-56 mt-3">
+                    <a href="index.html">
+                        <i class="fa-solid text-4xl text-white fa-circle-arrow-left"></i>
+                    </a>
+                </div>
                 <div
                     class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] bg-center">
                     <div class="flex justify-center">
@@ -100,7 +116,7 @@
                     <kbd id="/" class="kbd w-20">/</kbd>
                 </div>
             </div>
-            <div class="flex justify-between w-4/6 pb-10">
+            <div class="flex justify-between w-4/6 pb-10 ">
                 <button class="btn rounded-full text-white bg-purple-700 ">
                     Life
                     <img src="images/hard.svg" alt="">
@@ -112,6 +128,8 @@
                     <span id="current-score">0</span>
                 </button>
             </div>
+
+        
         </section>
         <!-- score section  -->
         <section id="final-score" class=" flex justify-center items-center min-h-screen hidden">
