@@ -7,7 +7,7 @@ function play(){
     playGround.classList.remove('hidden');
 
     hideElementById('final-score');
-    
+    document.addEventListener('keyup',handelKeybordButtonPress);
 }
 
 
@@ -72,7 +72,7 @@ function handelKeybordButtonPress(event){
         }
     }
 }
-document.addEventListener('keyup',handelKeybordButtonPress);
+// document.addEventListener('keyup',handelKeybordButtonPress);
 
 
 function gameOver (){

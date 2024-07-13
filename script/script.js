@@ -123,6 +123,7 @@ btn.addEventListener('click', () => {
             typingGround.removeAttribute('disabled')
             showTime.removeAttribute('hidden')
             startTyping();
+            typingGround.focus();
             
             break;
 
