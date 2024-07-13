@@ -59,7 +59,7 @@ const calculateTypingSpeed = () => {
         score.innerHTML = `Your typing speed is ${typingSpeed} words per minutes & you wrote ${actualWords} correct words out of ${sentencesWrite.length} and time taken ${totalTime}sec`;
     }
     else{
-        score.innerHTML = `Your typing speed is 0 words per minutes & time taken ${totalTime} sec`;
+        score.innerHTML = `Your typing speed is 0 words per minutes & time taken ${totalTime} sec.`;
     }
 }
 
