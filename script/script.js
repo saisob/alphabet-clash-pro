@@ -124,7 +124,6 @@ btn.addEventListener('click', () => {
             showTime.removeAttribute('hidden')
             startTyping();
             typingGround.focus();
-            
             break;
 
         case "done":
