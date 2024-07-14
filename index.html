@@ -26,24 +26,36 @@
                     top-notch typing games. Find it all from Alphabet Clash!</p>
 
             </div>
-            <div class="grid grid-cols-2 mt-32">
-                <div class="text-center space-y-14">
-                    <p class="text-white text-3xl font-semibold">Do you want to play game?Press click to Play</p>
-                    <button onclick="play(),getARandomAlphabet(),setBackgroundColorById()"
-                        class="btn text-xl font-bold">play now</button>
+            <div class="grid sm:grid-cols-1 sm:space-y-10 md:grid-cols-2 mt-32 gap-10 mx-10">
+                <div class="card bg-[#484f7b] h-60 shadow-xl mt-10">
+                    <div class="card-body">
+                        <p class="text-3xl text-yellow-300 font-semibold">Do you want to play game?Press click to Play
+                            Now.</p>
+                        <div class="card-actions justify-center">
+                            <button onclick="play(),getARandomAlphabet(),setBackgroundColorById()"
+                                class="btn text-xl font-bold">play Now</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center space-y-14">
-                    <p class="text-white text-3xl font-semibold">Do you want to test your typing speed?<br> Press click
-                        to Start</p>
-                    <button onclick="start()" class="btn text-xl font-bold ">Start now</button>
+                <div class="card bg-[#484f7b] h-60  shadow-xl">
+                    <div class="card-body">
+                        <p class="text-3xl text-yellow-300 font-semibold">Do you want to test your typing
+                            speed?<br>Press click
+                            to Start Now.</p>
+                        <div class="card-actions justify-center">
+                            <button onclick="start()" class="btn text-xl font-bold">Start Now</button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
         <!-- Typing test section  -->
         <section id="typingTestSection" class="bg-[#24284c] border-2 min-h-screen hidden">
             <div class="ml-5 mt-5">
                 <a href="index.html">
-                    <i class="fa-solid text-4xl text-white fa-circle-arrow-left"></i>
+                    <i class="fa-solid text-4xl
+                     text-white fa-circle-arrow-left"></i>
                 </a>
             </div>
             <div class="text-center space-y-5 mt-24 ">
@@ -54,7 +66,7 @@
                 </div>
                 <p class=" text-2xl text-white" id="showSentence"></p>
                 <div>
-                    <textarea id="textarea" class="textarea textarea-info w-[800px] h-[100px] text-2xl"
+                    <textarea id="textarea" class="textarea textarea-info sm:w-[400px] md:w-[800px] h-[100px] text-2xl"
                         disabled></textarea>
 
                 </div>
@@ -67,7 +79,7 @@
         <section id="play-ground" class=" flex flex-col items-center gap-20 pt-4 hidden">
 
             <div class="flex">
-                <div class="absolute -ml-56 mt-3">
+                <div class="absolute md:-ml-56 mt-3">
                     <a href="index.html">
                         <i class="fa-solid text-4xl text-white fa-circle-arrow-left"></i>
                     </a>
@@ -119,7 +131,7 @@
                     <kbd id="/" class="kbd w-20">/</kbd>
                 </div>
             </div>
-            <div class="flex justify-between w-4/6 pb-10 ">
+            <div class="flex justify-between sm:h-2/5 md:w-4/6 pb-10 ">
                 <button class="btn rounded-full text-white bg-purple-700 ">
                     Life
                     <img src="images/hard.svg" alt="">
